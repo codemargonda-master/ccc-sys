@@ -15,7 +15,7 @@ This repo is used to manage project that create a website of CCC (Code Course Ca
 * [markdown-it] - Markdown parser done right. Fast and easy to extend.
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
 * [node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework [@tjholowaychuk]
+* [Express] - fast node.js network app framework 
 * [MySQL] - database
 
 #### Development Process
