@@ -20,17 +20,18 @@ This repo is used to manage project that create a website of CCC (Code Course Ca
 
 ### Development Process
 
-+ Milestones
-  + Development Milestone
-  + Testing Milestone
++ Team Building
+  + Organization
 + Ideation
-  + Choose an idea then present it.
-  + Constantly improve or iterate on the idea.
-  + The idea is a usable software application.
-  + Implement the idea using any kind of methods.
-+ Build
-  + Document the software design and engineering theory sufficiently.
-  + Build the software using any kind of libraries or frameworks.
+  + Why
+  + How
+  + What
++ Design
+  + System
+  + Interface
++ Implementation
+  + Management
+  + Documentation
+  + Code
 + Presentation
-  + Present the result to the class.
-  + The winner will be chosen.
+  + Pitch
