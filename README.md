@@ -1,5 +1,5 @@
 # CCC-System
-This repo used to manage project that create a website of CCC (Code Course Camp) using React JS and Node JS. There are 2 systems in CCC, Android CCC and Web CCC. Code Course Camp is program that was created by Code Margonda to upgrading skill. There are 3 classes in CCC, beginner, intermediate, and advance.
+This repo is used to manage project that create a website of CCC (Code Course Camp). There are 2 systems in CCC, Android CCC and Web CCC. Code Course Camp is program that was created by Code Margonda to upgrading skill. There are 3 classes in CCC, beginner, intermediate, and advance.
 
 ## Team Member
 
@@ -8,3 +8,11 @@ This repo used to manage project that create a website of CCC (Code Course Camp)
 | Alfonsius Krisnanda | alfonsiuskrisnanda.ak@gmail.com | [@alfonkris](https://github.com/alfonkris)
 | Gungde Aditya | gunkdep@gmail.com | [@gungdeaditya](https://github.com/gungdeaditya)
 --------------------------------------------------
+
+### Tech Stack
+* [react.js] - HTML enhanced for web apps!
+* [markdown-it] - Markdown parser done right. Fast and easy to extend.
+* [Twitter Bootstrap] - great UI boilerplate for modern web apps
+* [node.js] - evented I/O for the backend
+* [Express] - fast node.js network app framework [@tjholowaychuk]
+* [MySQL] - database
