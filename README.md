@@ -1,7 +1,7 @@
-# CCC-System
+## CCC-System
 This repo is used to manage project that create a website of CCC (Code Course Camp). There are 2 systems in CCC, Android CCC and Web CCC. Code Course Camp is program that was created by Code Margonda to upgrading skill. There are 3 classes in CCC, beginner, intermediate, and advance.
 
-## Team Member
+### Team Member
 
 | Name   | Email              | GitHub |
 |--------|--------------------|--------|
@@ -18,7 +18,7 @@ This repo is used to manage project that create a website of CCC (Code Course Ca
 * [Express] - fast node.js network app framework 
 * [MySQL] - database
 
-#### Development Process
+### Development Process
 
 + Milestones
   + Development Milestone
