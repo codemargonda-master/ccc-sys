@@ -17,7 +17,7 @@ This repo is used to manage project that build the system and website of CCC (Co
 
 ### Account
 
-User can register and choose what course that showing up. User will receive an email schedule that contains when they should do the test. After that they will receive course payment billing and notify them if they ready to join the class.    
+The user can register and choose what course that showing up. The user will receive an email schedule that contains when they should do the test. After that, they will receive course payment billing and notify them if they're ready to join the class.
 
 ### Course
 
@@ -25,11 +25,11 @@ This contains what course does exist and what they learn, syllabus and system pe
 
 ### Schedule
 
-Schedule contains when this course will be held, usually we're using batch per batch system. For example, for batch #1 will be held on January and etc.
+The schedule contains when this course will be held, usually, we're using batch system. For example, for the first batch will be held on January, and so on.
 
 ### Mailing
 
-It will be integrated with account for scheduling and billing.
+It will be integrated with the account for scheduling and billing.
 
 ### Gallery
 
