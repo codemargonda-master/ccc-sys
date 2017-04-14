@@ -1,6 +1,6 @@
 # Code Course Camp System
 
-This repo is used to manage project that build the system and website of CCC (Code Course Camp). There are 2 courses in CCC: Android CCC and Web CCC. CCC is a learning program that is created by Code Margonda to upgrade people's skill on software development. There are 3 level of class in CCC: beginner, intermediate, and advanced.
+This repo is used to manage the project that builds the system and website of CCC (Code Course Camp). There are 2 courses in CCC: Android CCC and Web CCC. CCC is a learning program that is created by Code Margonda to upgrade people's skill on software development. There are 3 level of class in CCC: beginner, intermediate, and advanced.
 
 --------------------------------------------------------------------------------
 
