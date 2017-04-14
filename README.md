@@ -36,6 +36,18 @@ This repo is used to manage project that create a website of CCC (Code Course Ca
 + Presentation
   + Pitch
 
+## Functional Architecture 
+ - Account
+   User can register and choose what course that showing up. User will receive an email schedule that contains when they should do the test. After that they will receive course payment billing and notify them if they ready to join the class.    
+ - Course
+   This contains what course does exist and what they learn, syllabus and system per each day
+ - Schedule 
+   Schedule contains when this course will be held, usually we're using batch per batch system. For example, for batch #1 will be held on January and etc
+ - Gallery
+   This will contain some of photo or videos of testimony from our customer
+ - Mailing
+   It will be integrated with account for scheduling and billing 
+
 ## References
 
 - Le Wagon: https://lewagon.com
