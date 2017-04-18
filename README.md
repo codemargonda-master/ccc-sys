@@ -68,6 +68,12 @@ This will contain some of photo or videos of testimony from our customer.
 
 --------------------------------------------------------------------------------
 
+## UI Design
+
+![ui-image](sketch-design/Sketch-1.jpeg)
+
+--------------------------------------------------------------------------------
+
 ## References
 
 - Le Wagon: https://lewagon.com
