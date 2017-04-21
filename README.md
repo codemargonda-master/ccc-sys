@@ -70,7 +70,7 @@ This will contain some of photo or videos of testimony from our customer.
 
 ## UI Design
 
-![ui-image](sketch-design/Web CCC-system-06-01.jpeg)
+![ui-image](Mockup CCC-system/Web CCC-system-06-01.jpeg)
 
 --------------------------------------------------------------------------------
 
