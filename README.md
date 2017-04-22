@@ -39,10 +39,10 @@ This will contain some of photo or videos of testimony from our customer.
 
 ## Tech Stack
 
-* [react.js] - HTML enhanced for web apps!
+* [React.js] - HTML enhanced for web apps!
 * [markdown-it] - Markdown parser done right. Fast and easy to extend.
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
+* [Node.js] - evented I/O for the backend
 * [Express] - fast node.js network app framework
 * [MySQL] - database
 
@@ -70,7 +70,7 @@ This will contain some of photo or videos of testimony from our customer.
 
 ## Prototype
 
-https://marvelapp.com/5ba7i87/screen/27299051
+[First prototype in MarvelApp](https://marvelapp.com/5ba7i87/screen/27299051)
 
 --------------------------------------------------------------------------------
 
