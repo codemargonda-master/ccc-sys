@@ -79,7 +79,7 @@ This will contain some of photo or videos of testimony from our customer.
 - Le Wagon: https://lewagon.com
 - Hack Reactor: http://hackreactor.com
 - Hacktiv8: https://hacktiv8.com
-  - Full Stack Web: https://hacktiv8.com/fullstack/apply
+- Full Stack Web: https://hacktiv8.com/fullstack/apply
 - CodeMargonda CCC: http://codemargonda.com/android-ccc
 - Kodefox: https://kodefox.com
 - DyCode Bootcamp: https://dycode.co.id/bootcamp
