@@ -39,12 +39,12 @@ This will contain some of photo or videos of testimony from our customer.
 
 ## Tech Stack
 
-* [React.js] - HTML enhanced for web apps!
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [Node.js] - evented I/O for the backend
-* [Express] - fast node.js network app framework
-* [MySQL] - database
+* [React.js](https://facebook.github.io/react) - HTML enhanced for web apps!
+* [markdown-it](https://github.com/markdown-it/markdown-it) - Markdown parser done right. Fast and easy to extend.
+* [Twitter Bootstrap](http://getbootstrap.com) - great UI boilerplate for modern web apps
+* [Node.js](https://nodejs.org) - evented I/O for the backend
+* [Express](https://expressjs.com) - fast node.js network app framework
+* [MySQL](https://mysql.com) - database
 
 --------------------------------------------------------------------------------
 
