@@ -1,10 +1,8 @@
 # CodeCourseCamp System: Backend
 
-[explanation]
+This repo is created to manage all along the data structured, created databases, mailings, account and shows up the data into FrontEnd.
 
-## Getting Started
+## Role Stack
 
-```sh
-npm install
-npm start
-```
+* MYSQL
+* [
