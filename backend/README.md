@@ -4,17 +4,6 @@ This repo is created to manage all along the data structured, created databases,
 
 ## Database Scheme
 
-+ Table Account 
-    + Dashboard <br>
-    Attribute :
-      - Full Name [required]
-      - Email [required]
-      - Password [required]
-    + Registration Course <br>
-    Attribute :
-      - Phone Number [required]
-      - Address [required]
-
 ### Table of Account
 
 Attribute for General Registration
@@ -30,8 +19,8 @@ Attribute for Registration Course
 ```json
 {
     "birth_date" : "11-06-1996",
-    "gender" : "Male",
-    "phone" : +6285772136367,
+    "gender" : "male",
+    "phone" : "6285772136367",
     "address" : "Jalan Margonda Raya",
     "city" : "Depok",
     "last_education" : "SMA",
