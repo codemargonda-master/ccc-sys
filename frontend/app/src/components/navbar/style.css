@@ -1,0 +1,61 @@
+.nav {
+  padding: 12px;
+}
+
+.navbar {
+  height: 75px;
+  text-align: center;
+  padding-right: 32px;
+  padding-left: 32px;
+  background-color: #ffffff;
+}
+
+.navbar-logo {
+  float: left;
+  height: 75px;
+}
+
+.text-black {
+  color: #000000;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.active {
+  color: #db0f0f;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .nav {
+      padding: 1em;
+      background-color: #ffffff;
+    }
+
+    .navbar {
+      height: 75px;
+      text-align: center;
+      padding-right: 1em;
+      padding-left: 1em;
+      background-color: #ffffff;
+    }
+
+    .navbar-toggle{
+      margin-top: 1.5em !important;
+      margin-right: 0 !important;
+    }
+
+    .icon-bar{
+      background-color: black !important;
+    }
+
+    .navbar-logo {
+      float: left;
+      margin-top: 1em;
+      height: 50px;
+    }
+  }

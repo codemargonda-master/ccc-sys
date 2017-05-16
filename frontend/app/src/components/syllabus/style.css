@@ -1,0 +1,84 @@
+.syllabus{
+  width: 100%;
+  height: auto;
+  padding: 2em;
+  background: #353535;
+  text-align: center;
+}
+
+.syllabus-title{
+  font-size: 24px;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+.syllabus-subtitle{
+  font-size: 14px;
+  color: white;
+  font-family: 'Raleway';
+  font-weight: 300;
+  padding-top: 2em;
+}
+
+.syllabus-content{
+  width: auto;
+  height: auto;
+  padding-top: 3em;
+  padding-left: 20em;
+  padding-right: 20em;
+}
+
+.syllabus-input{
+  border-radius: 2%;
+  padding-left: 1em;
+  width: 100%;
+  font-family: 'Raleway';
+  font-weight: 300;
+  height: 40px;
+}
+
+.syllabus-button{
+  border-radius: 5%;
+  border-width: 0.5px;
+  background: #dd8a2f;
+  height: 40px;
+  font-family: 'Raleway';
+  font-weight: 500;
+  width: 100%;
+  color: white;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .syllabus{
+      padding: 2em;
+    }
+
+    .syllabus-title{
+      font-size: 14px;
+    }
+
+    .syllabus-subtitle{
+      font-size: 10px;
+      padding-top: 2em;
+    }
+
+    .syllabus-content{
+      padding-top: 2em;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .syllabus-input{
+      height: 30px;
+      font-size: 12px;
+    }
+
+    .syllabus-button{
+      height: 30px;
+      font-size: 12px;
+    }
+  }

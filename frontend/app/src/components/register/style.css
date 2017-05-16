@@ -1,0 +1,67 @@
+.register{
+  width: 100%;
+  height: 100vh;
+  padding: 11em;
+  padding-left: 10em;
+  text-align: left;
+  background-image: url("../../assets/register.png");
+}
+
+.register-title{
+  font-size: 36px;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.register-subtitle{
+  padding-top: 1em;
+  max-width: 50%;
+  font-size: 21px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  color: white;
+}
+
+.register-button{
+  width: 225px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  margin-top: 2em;
+  color: white;
+  font-family: 'Raleway';
+  font-weight: 500;
+  text-align: center;
+  padding: 0.4em;
+  background-color: #c63c2e;
+  font-size: 18px;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .register{
+      height: auto;
+      padding: 3em;
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .register-title{
+      font-size: 24px;
+    }
+
+    .register-subtitle{
+      padding-top: 1.5em;
+      max-width: 100%;
+      font-size: 14px;
+    }
+
+    .register-button{
+      width: 175px;
+      height: 30px;
+      font-size: 14px;
+    }
+  }

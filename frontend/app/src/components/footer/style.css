@@ -1,0 +1,112 @@
+.footer{
+  width: 100%;
+  height: 400px;
+  padding: 3em;
+  padding-left: 10em;
+  padding-right: 10em;
+  background: #a52721;
+  text-align: left;
+}
+
+#footer-content{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#footer-ccc-logo{
+  width: 150px;
+}
+
+.footer-text{
+  font-size: 14px;
+  color: white;
+  font-family: 'Raleway';
+  font-weight: 400;
+  padding-bottom: 0.5em;
+}
+
+.footer-input{
+  border-radius: 5%;
+  padding-left: 1em;
+  width: 100%;
+  height: 35px;
+  color: #686565;
+}
+
+.footer-button{
+  border-radius: 10%;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  height: 35px;
+  text-align: center;
+  padding: 0.4em;
+  font-family: 'Raleway';
+  font-weight: 400;
+  width: 100%;
+  color: white;
+}
+
+.footer-line{
+  border-color: rgba(255,255,255,0.3);
+  border-style: solid;
+  border-width: 0.1px;
+  margin-top: 1em;
+  width: 100%;
+}
+
+#footer-section{
+  font-size: 21px;
+  color: white;
+  padding-top: 2em;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+
+#footer-subsection{
+  font-size: 16px;
+  color: white;
+  padding-top: 0.75em;
+  font-family: 'Raleway';
+  font-weight: 300;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .footer{
+      height: auto;
+      padding: 3em;
+    }
+
+    #footer-ccc-logo{
+      width: 125px;
+    }
+
+    .footer-text{
+      font-size: 12px;
+      padding-top: 1em;
+    }
+
+    .footer-input{
+      font-size: 12px;
+    }
+
+    .footer-button{
+      padding: 0.7em;
+      font-size: 12px;
+    }
+
+    .footer-line{
+      margin-top: 2em;
+    }
+
+    #footer-section{
+      font-size: 18px;
+    }
+
+    #footer-subsection{
+      font-size: 14px;
+    }
+  }

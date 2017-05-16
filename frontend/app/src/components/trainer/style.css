@@ -1,0 +1,67 @@
+.trainer{
+  height: 500px;
+  width: 100%;
+  background: #353535;
+  text-align: center;
+  padding: 4em;
+}
+
+.trainer-title{
+  width: 100%;
+  font-size: 36px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  color: white;
+}
+
+.trainer-image{
+  border-radius: 50%;
+  background: white;
+  width: 200px;
+  height: 200px;
+  padding: 1.5em;
+  margin-top: 2.5em;
+}
+
+.trainer-text{
+  font-size: 24px;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: white;
+  padding-top: 1em;
+}
+
+.trainer-subtext{
+  font-size: 18px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  color: #9b9b9b;
+  padding-top: 0.5em;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .trainer{
+      height: auto;
+      padding: 3em;
+    }
+
+    .trainer-title{
+      font-size: 24px;
+    }
+
+    .trainer-image{
+      width: 100px;
+      height: 100px;
+    }
+
+    .trainer-text{
+      font-size: 18px;
+    }
+
+    .trainer-subtext{
+      font-size: 14px;
+    }
+  }

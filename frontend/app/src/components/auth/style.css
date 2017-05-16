@@ -1,0 +1,119 @@
+.login{
+  width: 100%;
+  height: auto;
+  background: #f4f4f4;
+  padding-top: 5em;
+}
+
+.signup-banner{
+  width: 100%;
+  height: 575px;
+  padding-top: 12em !important;
+  padding: 5em;
+  text-align: left;
+  background-image: url("../../assets/login.png")!important;
+}
+
+.login-banner-title{
+  font-size: 36px;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.login-banner-subtitle{
+  font-size: 24px;
+  color: white;
+  padding-top: 1em !important;
+  font-family: 'Raleway';
+  font-weight: 400;
+}
+
+.login-form{
+  width: 100%;
+  height: 400px;
+  padding-top: 5em;
+  padding: 3em;
+  text-align: left;
+}
+
+.login-form-title{
+  font-size: 36px;
+  color: black;
+}
+
+.login-form-subtitle{
+  font-size: 14px;
+  color: #939292;
+  padding-bottom: 1em;
+}
+
+#login-text{
+  color: rgb(24, 100, 230);
+}
+
+.login-form-label{
+  font-size: 18px;
+  color: black;
+  padding-top: 1em;
+}
+
+.login-form-input{
+  width: 100%;
+  padding: 0.5em;
+  border: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #bfbfbf;
+  color: #939292;
+}
+
+.login-button{
+  width: 100%;
+  background: #c63c2e;
+  border: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #bfbfbf;
+  color: white;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.error-content{
+  color: red;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .login-banner{
+      width: 100%;
+      height: 225px !important;
+      padding: 2em !important;
+      text-align: left;
+      background-image: url("../../assets/kelas.png");
+    }
+
+    .login-banner-title{
+      font-size: 24px !important;
+      color: white;
+      font-family: 'Montserrat';
+      font-weight: 500;
+    }
+
+    .login-banner-subtitle{
+      font-size: 16px !important;
+      color: white;
+      padding-top: 1em !important;
+      font-family: 'Raleway';
+      font-weight: 400;
+    }
+
+    .login-form-label{
+      font-size: 14px !important;
+      color: black;
+      padding-top: 1em;
+    }
+  }

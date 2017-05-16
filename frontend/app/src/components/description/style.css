@@ -1,0 +1,57 @@
+.description {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.desc-image {
+  padding: 5em;
+  padding-left: 10em;
+  max-width: 575px;
+  max-height: 575px;
+}
+
+.desc-text {
+  padding-top: 11em;
+  text-align: left;
+  max-width: 500px;
+}
+
+.text-content {
+  font-size: 36px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.subtext-content {
+  font-size: 21px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  color: #686565;
+  margin-top: 1em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 732px) and (-webkit-min-device-pixel-ratio: 1) {
+  .description {
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    text-align: center;
+  }
+  .desc-image {
+    padding: 0;
+    padding-left: 0;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .desc-text {
+    padding: 1.5em;
+    text-align: center;
+  }
+  .text-content {
+    font-size: 24px;
+  }
+  .subtext-content {
+    font-size: 16px;
+  }
+}

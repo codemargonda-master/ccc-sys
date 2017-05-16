@@ -1,0 +1,46 @@
+.schedule{
+  width: 100%;
+  height: auto;
+  background: #c63c2e;
+  padding: 4em;
+  padding-left: 10em;
+  padding-right: 10em;
+  text-align: center;
+}
+
+.schedule-title{
+  font-size: 36px;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.schedule-table{
+  width: 100%;
+  height: auto;
+  border-radius: 2%;
+  background: #f4f4f4;
+  margin-top: 2em;
+}
+
+#schedule-th{
+  text-align: center !important;
+}
+
+#text-red{
+  color: #c63c2e;
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 732px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .schedule{
+      height: auto;
+      padding: 3em;
+    }
+
+    .schedule-title{
+      font-size: 24px;
+    }
+  }
