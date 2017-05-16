@@ -7,9 +7,9 @@ const app = express()
 app.use(bodyParser.urlencoded({extended: true})) // support x-www-form-urlencoded
 app.use(bodyParser.json())
 
-var connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'ccc_system'})
+var connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'rest-crud-node'})
 
-connection.connect(function (err) {
+connection.connect(function(err) {
   if (!err) {
     console.log('Database is connected ...')
   } else {
@@ -17,22 +17,22 @@ connection.connect(function (err) {
   }
 })
 
-app.get('/', function (req, res) {
-  res.send({
-    msg: 'Hello from server!'
-  })
+app.get('/', function(req, res) {
+  res.send({msg: 'Hello from server!'})
 })
 
-app.get('/get', function (req, res) {
+app.get('/get', function(req, res) {
   var query = "SELECT * FROM user WHERE name='alfon' "
 
-  connection.query(query, function (err, rows) {
-    if (err) { throw err }
+  connection.query(query, function(err, rows) {
+    if (err) {
+      throw err
+    }
     res.json({success: true, msg: 'Success'})
   })
 })
 // post data to DB | POST (register)
-app.post('/auth', function (req, res) {
+app.post('/auth', function(req, res) {
   // // validation
   // req.assert('name', 'Name is required').notEmpty();
   // req.assert('email', 'A valid email is required').isEmail();
@@ -56,7 +56,7 @@ app.post('/auth', function (req, res) {
   if (!data.name && !data.email && data.password) {
     res.send({success: false, msg: 'Data incompplete'})
   } else {
-    connection.query('INSERT INTO user set ? ', data, function (err, rows) {
+    connection.query('INSERT INTO t_user set ? ', data, function(err, rows) {
       if (err) {
         res.send(err)
       }
@@ -66,7 +66,7 @@ app.post('/auth', function (req, res) {
   }
 })
 
-app.post('/signin', function (req, res) {
+app.post('/signin', function(req, res) {
   var data = {
     email: req.body.email,
     password: req.body.password
@@ -74,7 +74,7 @@ app.post('/signin', function (req, res) {
 
   var query = 'SELECT * FROM user WHERE email= ' + mysql.escape(data.email) + ' AND password= ' + mysql.escape(data.password) + ''
 
-  connection.query(query, function (err, rows, fields) {
+  connection.query(query, function(err, rows, fields) {
     if (err) {
       throw err
     }
