@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "mysql -u root < ./setup.sql",
     "dev": "nodemon index",
     "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +12,9 @@
   "author": "alfonkris",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2",
     "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
     "md5": "^2.2.1",
     "mysql": "^2.13.0",
     "node-js": "^1.0.0"

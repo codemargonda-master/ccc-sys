@@ -1,34 +1,38 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var mysql = require('mysql');
+var express = require('express')
+var bodyParser = require('body-parser')
+var mysql = require('mysql')
 
-const app = express();
+const app = express()
 
-app.use(bodyParser.urlencoded({extended: true})); //support x-www-form-urlencoded
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true})) // support x-www-form-urlencoded
+app.use(bodyParser.json())
 
-var connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'rest-crud-node'});
+var connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'ccc_system'})
 
-connection.connect(function(err) {
+connection.connect(function (err) {
   if (!err) {
-    console.log("Database is connected ...");
+    console.log('Database is connected ...')
   } else {
-    console.log("Error connecting database ... ");
+    console.log('Error connecting database ... ')
   }
-});
+})
 
-app.get('/get', function(req, res) {
-  var query = "SELECT * FROM t_user WHERE name='alfon' ";
-
-  connection.query(query, function(err, rows) {
-    if (err)
-      throw err;
-    res.json({success: true, msg: 'Success'});
+app.get('/', function (req, res) {
+  res.send({
+    msg: 'Hello from server!'
   })
-});
-//post data to DB | POST (register)
-app.post('/auth', function(req, res) {
+})
 
+app.get('/get', function (req, res) {
+  var query = "SELECT * FROM user WHERE name='alfon' "
+
+  connection.query(query, function (err, rows) {
+    if (err) { throw err }
+    res.json({success: true, msg: 'Success'})
+  })
+})
+// post data to DB | POST (register)
+app.post('/auth', function (req, res) {
   // // validation
   // req.assert('name', 'Name is required').notEmpty();
   // req.assert('email', 'A valid email is required').isEmail();
@@ -40,39 +44,42 @@ app.post('/auth', function(req, res) {
   //   return;
   // }
 
-  //get data
+  // get data
   var data = {
     name: req.body.name,
     email: req.body.email,
     password: req.body.password
-  };
+  }
 
-  console.log(data);
+  console.log(data)
 
   if (!data.name && !data.email && data.password) {
     res.send({success: false, msg: 'Data incompplete'})
   } else {
-    connection.query("INSERT INTO t_user set ? ", data, function(err, rows) {
-      if (err)
+    connection.query('INSERT INTO user set ? ', data, function (err, rows) {
+      if (err) {
         res.send(err)
-      res.json({success: true, msg: 'Insert Success'});
-      console.log('Insert Success');
-    });
+      }
+      res.json({success: true, msg: 'Insert Success'})
+      console.log('Insert Success')
+    })
   }
-});
+})
 
-app.post('/signin', function(req, res) {
+app.post('/signin', function (req, res) {
   var data = {
     email: req.body.email,
     password: req.body.password
   }
-  var query = "SELECT * FROM t_user WHERE email= " + mysql.escape(data.email) + " AND password= " + mysql.escape(data.password) + "";
 
-  connection.query(query, function(err, rows, fields) {
-    if (err)
-      throw err;
-    res.json({success: true, msg: 'User Exist', email: rows[0].email, password: rows[0].password});
+  var query = 'SELECT * FROM user WHERE email= ' + mysql.escape(data.email) + ' AND password= ' + mysql.escape(data.password) + ''
+
+  connection.query(query, function (err, rows, fields) {
+    if (err) {
+      throw err
+    }
+    res.json({success: true, msg: 'User Exist', email: rows[0].email, password: rows[0].password})
   })
-});
+})
 
-module.exports = app;
+module.exports = app
