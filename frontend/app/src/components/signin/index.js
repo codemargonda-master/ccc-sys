@@ -2,38 +2,57 @@ import React, {Component} from 'react';
 import './style.css';
 import {NavLink} from 'react-router-dom';
 import $ from 'jquery';
+import axios from 'axios';
 
 class Signin extends Component {
   handleClick() {
 
-    $.ajax({
+    var email = $('#input_email').val();
+    var password = $('#input_password').val();
 
-      url: "localhost:9000/signin",
-      type: "post",
-      data: $("#login-form").serialize(),
-      success: function(res) {
-
-        location.href = "/dashboard";
-        return false;
-      },
-      error: function(xhr, status, error) {
-        var i_name = $('#input_name').val();
-        var i_email = $('#input_email').val();
-        var i_pass = $('#input_password').val();
-
-        if (i_name == "" || i_email == "" || i_pass == "") {
-          console.log(xhr.responseText);
-          var err = '';
-          $.each(JSON.parse(xhr.responseText), function(i, item) {
-
-            err += '<li>' + item.msg + '</li>';
-          });
-          $(".err-area").html(err);
-          return false;
-        }
+    axios.post('http://localhost:9000/signin', {
+      email: email,
+      password: password
+    }).then(function(response) {
+      if (response.status = 200) {
+        console.log(response);
+        window.location.href = '/dashboard';
+      } else {
+        console.log(response);
       }
 
+    }).catch(function(error) {
+      console.log(error);
     });
+
+    // $.ajax({
+    //
+    //   url: "localhost:9000/signin",
+    //   type: "post",
+    //   data: $("#login-form").serialize(),
+    //   success: function(res) {
+    //
+    //     location.href = "/dashboard";
+    //     return false;
+    //   },
+    //   error: function(xhr, status, error) {
+    //     var i_name = $('#input_name').val();
+    //     var i_email = $('#input_email').val();
+    //     var i_pass = $('#input_password').val();
+    //
+    //     if (i_name == "" || i_email == "" || i_pass == "") {
+    //       console.log(xhr.responseText);
+    //       var err = '';
+    //       $.each(JSON.parse(xhr.responseText), function(i, item) {
+    //
+    //         err += '<li>' + item.msg + '</li>';
+    //       });
+    //       $(".err-area").html(err);
+    //       return false;
+    //     }
+    //   }
+    //
+    // });
   }
 
   render() {
@@ -61,10 +80,10 @@ class Signin extends Component {
 
               <form method="post" action="" id="login-form">
                 <div className="login-form-label">Email</div>
-                <input className="login-form-input" type="text" name="email" placeholder="Email"></input>
+                <input id="input_email" className="login-form-input" type="text" name="email" placeholder="Email"></input>
                 <div className="login-form-label">Password</div>
-                <input className="login-form-input" type="password" name="password" placeholder="Password"></input>
-                <button className="login-button" onClick={this.handleClick}>Masuk</button>
+                <input id="input_password" className="login-form-input" type="password" name="password" placeholder="Password"></input>
+                <button type="button" className="login-button" onClick={this.handleClick}>Masuk</button>
               </form>
               <div className="error-content">
                 <ul className="err-area"></ul>

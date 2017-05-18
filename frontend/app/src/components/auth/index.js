@@ -16,8 +16,14 @@ class Auth extends Component {
       email: email,
       password: password
     }).then(function(response) {
-      console.log(response);
-      window.location.href='/signin';
+      if (response.status=200){
+        console.log(response);
+        window.location.href='/signin';
+      }
+      else {
+        console.log(response);
+      }
+
     }).catch(function(error) {
       console.log(error);
     });
