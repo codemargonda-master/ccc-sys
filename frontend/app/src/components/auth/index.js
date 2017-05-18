@@ -3,8 +3,25 @@ import './style.css';
 import {NavLink} from 'react-router-dom';
 import axios from 'axios';
 import $ from 'jquery';
+import AlertContainer from '../../../node_modules/react-alert/dist/alert-container';
+import Navbar from '../navbar/index';
 
 class Auth extends Component {
+  alertOptions = {
+    offset: 14,
+    position: 'top right',
+    theme: 'light',
+    time: 5000,
+    transition: 'scale'
+  }
+
+  showAlert = () => {
+    this.msg.show('Registrasi berhasil!', {
+      time: 2000,
+      type: 'success',
+      icon: <img src="path/to/some/img/32x32.png"/>
+    })
+  }
 
   handleClick() {
     var name = $('#input_name').val();
@@ -16,14 +33,16 @@ class Auth extends Component {
       email: email,
       password: password
     }).then(function(response) {
-      if (response.status=200){
+      if (response.status = 200) {
         console.log(response);
-        window.location.href='/signin';
-      }
-      else {
+        alert("Registrasi berhasil!");
+        window.location.href = '/signin';
+      } else if (response.status = 401) {
+        console.log(response);
+        alert("Email sudah terdaftar!");
+      } else {
         console.log(response);
       }
-
     }).catch(function(error) {
       console.log(error);
     });
@@ -32,6 +51,8 @@ class Auth extends Component {
   render() {
     return (
       <div className="login">
+        <Navbar/>
+        <AlertContainer ref={a => this.msg = a} {...this.alertOptions}/>
         <div className="row">
           <div className="col-md-6 col-sm-6 col-xs-12">
             <div className="signup-banner">

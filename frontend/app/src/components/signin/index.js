@@ -3,6 +3,7 @@ import './style.css';
 import {NavLink} from 'react-router-dom';
 import $ from 'jquery';
 import axios from 'axios';
+import Navbar from '../navbar/index';
 
 class Signin extends Component {
   handleClick() {
@@ -16,9 +17,11 @@ class Signin extends Component {
     }).then(function(response) {
       if (response.status = 200) {
         console.log(response);
+        alert("Masuk ke akun berhasil!");
         window.location.href = '/dashboard';
       } else {
         console.log(response);
+        alert("Data tidak cocok!");
       }
 
     }).catch(function(error) {
@@ -58,6 +61,7 @@ class Signin extends Component {
   render() {
     return (
       <div className="login">
+        <Navbar/>
         <div className="row">
           <div className="col-md-6 col-sm-6 col-xs-12">
             <div className="login-banner">

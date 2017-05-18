@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './style.css';
-import Navbar from '../navbar/index';
+import Navbar from '../navbar/index2';
 import Header from '../header/index';
 import Description from '../description/index';
 import Classes from '../classes/index';
