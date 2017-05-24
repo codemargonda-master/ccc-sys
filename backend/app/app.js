@@ -21,15 +21,6 @@ app.get('/', function (req, res) {
   res.send({msg: 'Hello from server!'})
 })
 
-app.get('/get', function (req, res) {
-  const query = "SELECT * FROM user WHERE name='alfon' "
-
-  connection.query(query, function (err, rows) {
-    if (err) { throw err }
-    res.json({success: true, msg: 'Success'})
-  })
-})
-// post data to DB | POST (register)
 app.post('/auth', function (req, res) {
   // // validation
   // req.assert('name', 'Name is required').notEmpty();
