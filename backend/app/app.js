@@ -7,7 +7,7 @@ const app = express()
 app.use(bodyParser.urlencoded({extended: true})) // support x-www-form-urlencoded
 app.use(bodyParser.json())
 
-var connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'rest-crud-node'})
+var connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'ccc-system'})
 
 connection.connect(function(err) {
   if (!err) {
@@ -31,11 +31,11 @@ app.post('/auth', function(req, res) {
     password: req.body.password
   }
 
-  var query = 'SELECT count(*) as count FROM t_user WHERE email= ' + mysql.escape(data.email)
+  var query = 'SELECT count(*) as count FROM account WHERE email= ' + mysql.escape(data.email)
 
   connection.query(query, function(error, rows) {
     if (rows[0].count != 1) {
-      connection.query('INSERT INTO t_user set ? ', data, function(error, rows) {
+      connection.query('INSERT INTO account set ? ', data, function(error, rows) {
         if (error) {
           res.send(error)
         }
@@ -59,7 +59,7 @@ app.post('/signin', function(req, res) {
     password: req.body.password
   }
 
-  var query = 'SELECT *,count(*) as count FROM t_user WHERE email= ' + mysql.escape(data.email) + ' AND password= ' + mysql.escape(data.password) + ''
+  var query = 'SELECT *,count(*) as count FROM account WHERE email= ' + mysql.escape(data.email) + ' AND password= ' + mysql.escape(data.password) + ''
 
   connection.query(query, function(error, rows, fields) {
     if (rows[0].count != 1) {
@@ -71,6 +71,55 @@ app.post('/signin', function(req, res) {
     } else {
       res.send(error)
     }
+  })
+
+})
+
+app.post('/regis', function(req, res) {
+
+  // get data
+  var data = {
+    birthdate: req.body.birthdate,
+    gender: req.body.gender,
+    phone: req.body.phone,
+    address: req.body.address,
+    city: req.body.city,
+    lasteducation: req.body.lasteducation,
+    course: req.body.course,
+    batch: req.body.batch
+  }
+
+  var query = 'SELECT count(*) as count FROM course_registration WHERE batch= ' + mysql.escape(data.batch)
+
+  connection.query(query, function(error, rows) {
+    if (rows[0].count != 1) {
+      connection.query('INSERT INTO course_registration set ? ', data, function(error, rows) {
+        if (error) {
+          res.send(error)
+        }
+        res.status(200).json({success: true, msg: 'Registration Success'})
+        console.log('Registration Success')
+      })
+    } else if (rows[0].count = 1) {
+      res.status(401).json({success: false, msg: 'Batch already registered!'})
+      console.log('Batch already registered!')
+    } else {
+      res.send(error)
+    }
+  })
+
+})
+
+app.get('/course-registered', function(req, res) {
+
+  var query = 'SELECT course, batch FROM course_registration'
+
+  connection.query(query, function(error, rows, fields) {
+    if (error) {
+      res.send(error)
+    }
+    res.status(200).json({course: rows[0].course, batch: rows[0].batch})
+    console.log('Data Sent!')
   })
 
 })

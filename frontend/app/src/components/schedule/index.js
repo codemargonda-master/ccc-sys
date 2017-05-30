@@ -59,8 +59,8 @@ class Schedule extends Component {
             </thead>
             <tbody>
 
-              {schedule.map(function(sc,index){
-                return(
+              {schedule.map(function(sc, index) {
+                return (
                   <tr key={index}>
                     <td>{sc.level}</td>
                     <td>{sc.test}</td>
@@ -69,8 +69,7 @@ class Schedule extends Component {
                     <td>{sc.status}</td>
                   </tr>
                 );
-              })
-            }
+              })}
 
             </tbody>
           </table>

@@ -3,11 +3,29 @@ import './style.css';
 import AndroidLogo from '../../assets/android.png';
 import WebLogo from '../../assets/html5.png';
 import Navbar from '../navbar/index2';
-import {NavLink} from 'react-router-dom';
+// import axios from 'axios';
+// import $ from 'jquery';
+// import ajax from 'jquery';
 
 class Dashboard extends Component {
   handleClick() {
-    window.location.href = '/home';
+    window.location.href = '/registration';
+  }
+
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:9000/course-registered')
+    .then(response => response.json())
+    .then((data) => {
+      this.setState({data});
+    });
   }
 
   render() {
@@ -57,10 +75,20 @@ class Dashboard extends Component {
                   <tr>
                     <th id="schedule-th">Kelas</th>
                     <th id="schedule-th">Batch</th>
-                    <th id="schedule-th">Status</th>
                   </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+
+                  {this.state.data.map(function(dt, index) {
+                    return (
+                      <tr key={index}>
+                        <td>{dt.course}</td>
+                        <td>{dt.batch}</td>
+                      </tr>
+                    );
+                  })}
+
+                </tbody>
               </table>
             </div>
 

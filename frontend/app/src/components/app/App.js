@@ -6,6 +6,7 @@ import Home2 from '../home/index2';
 import Auth from '../auth/index';
 import Signin from '../signin/index';
 import Dashboard from '../dashboard/index';
+import Registration from '../course-register/index';
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path='/auth' component={Auth}/>
             <Route exact path='/signin' component={Signin}/>
             <Route exact path='/dashboard' component={Dashboard}/>
+            <Route exact path='/registration' component={Registration}/>
           </Switch>
 
         </div>
