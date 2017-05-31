@@ -16,19 +16,20 @@ class Dashboard extends Component {
     super(props, context);
 
     this.state = {
-      data: []
+      datas: []
     };
   }
 
   componentDidMount() {
     fetch('http://localhost:9000/course-registered')
     .then(response => response.json())
-    .then((data) => {
-      this.setState({data});
+    .then((datas) => {
+      this.setState({datas});
     });
   }
 
   render() {
+    console.log('state', this.state);
     return (
       <div className="dashboard">
         <Navbar/>
@@ -79,11 +80,11 @@ class Dashboard extends Component {
                 </thead>
                 <tbody>
 
-                  {this.state.data.map(function(dt, index) {
+                  {this.state.datas.map(function(data, index) {
                     return (
-                      <tr key={index}>
-                        <td>{dt.course}</td>
-                        <td>{dt.batch}</td>
+                      <tr key={index} id="dashboard-table">
+                        <td>{data.course}</td>
+                        <td>{data.batch}</td>
                       </tr>
                     );
                   })}

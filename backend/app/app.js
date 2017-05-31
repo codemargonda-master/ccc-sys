@@ -8,7 +8,12 @@ app.use(bodyParser.urlencoded({extended: true})) // support x-www-form-urlencode
 app.use(bodyParser.json())
 
 
-const connection = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'ccc_system'})
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'ccc-system'
+})
 
 connection.connect(function (err) {
   if (!err) {
@@ -125,7 +130,12 @@ app.get('/course-registered', function(req, res) {
     if (error) {
       res.send(error)
     }
-    res.status(200).json({course: rows[0].course, batch: rows[0].batch})
+
+    let datas = []
+    datas = rows;
+    console.log('rows', rows);
+
+    res.status(200).send(datas)
     console.log('Data Sent!')
   })
 

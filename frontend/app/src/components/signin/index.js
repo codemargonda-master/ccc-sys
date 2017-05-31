@@ -4,9 +4,30 @@ import {NavLink} from 'react-router-dom';
 import $ from 'jquery';
 import axios from 'axios';
 import Navbar from '../navbar/index';
+import {Provider, connect} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import {Control, Errors, Form, combineForms, actions} from 'react-redux-form';
+var thunk = require('redux-thunk').default
+import thunkMiddleware from 'redux-thunk';
+import reduxLogger from 'redux-logger';
 
-class Signin extends Component {
-  handleClick() {
+const initialUserState = {
+  email: '',
+  password: ''
+};
+
+const store = createStore(combineForms({user: initialUserState}), applyMiddleware(thunkMiddleware, reduxLogger));
+
+class UserForm extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    const {dispatch} = store;
+    const user = store.getState().user;
 
     var email = $('#input_email').val();
     var password = $('#input_password').val();
@@ -27,36 +48,74 @@ class Signin extends Component {
     }).catch(function(error) {
       console.log(error);
     });
-
-    // $.ajax({
-    //
-    //   url: "localhost:9000/signin",
-    //   type: "post",
-    //   data: $("#login-form").serialize(),
-    //   success: function(res) {
-    //
-    //     location.href = "/dashboard";
-    //     return false;
-    //   },
-    //   error: function(xhr, status, error) {
-    //     var i_name = $('#input_name').val();
-    //     var i_email = $('#input_email').val();
-    //     var i_pass = $('#input_password').val();
-    //
-    //     if (i_name == "" || i_email == "" || i_pass == "") {
-    //       console.log(xhr.responseText);
-    //       var err = '';
-    //       $.each(JSON.parse(xhr.responseText), function(i, item) {
-    //
-    //         err += '<li>' + item.msg + '</li>';
-    //       });
-    //       $(".err-area").html(err);
-    //       return false;
-    //     }
-    //   }
-    //
-    // });
   }
+
+  render() {
+    const getUserClassName = field => {
+      const userForm = store.getState().forms.user;
+      const isTouched = userForm[field].touched;
+      const isValid = userForm[field].valid;
+
+      return `form-control${isTouched || this.props.submitFailed
+        ? ' active'
+        : ''}${ !isValid
+          ? ' invalid'
+          : ''}`;
+    };
+
+    const MyTextInput = props => {
+      const [,
+        name] = props.name.split('.');
+      const className = getUserClassName(name);
+
+      return <input className={className} autoComplete="off" {...props}/>;
+    };
+
+    const showErrors = field => {
+      const form = store.getState().forms.user.$form;
+
+      return !field.pristine || form.submitFailed;
+    };
+
+    return (
+      <Form model="user">
+        <div className="form-group">
+          <label>Email</label>
+          <Control.text id="input_email" model=".email" component={MyTextInput} validators={{
+            required: val => val && val.length,
+            validEmail: window.validator.isEmail
+          }}/>
+          <Errors className="errors" model="user.email" show={showErrors} messages={{
+            required: 'Email is required. ',
+            validEmail: 'Email should be a valid email address.'
+          }}/>
+        </div>
+        <div className="form-group">
+          <label>Password</label>
+          <Control type="password" id="input_password" model=".password" component={MyTextInput} validators={{
+            required: val => val && val.length,
+            length: val => val.length == 0 || val.length > 4
+          }}/>
+          <Errors className="errors" model="user.password" show={showErrors} messages={{
+            required: 'Password is required. ',
+            length: 'Password should be longer than 4 chars.'
+          }}/>
+        </div>
+        <button onClick={this.handleSubmit} className="btn btn-primary">
+          Submit
+        </button>
+      </Form>
+    );
+  }
+}
+
+const BasicForm = connect(state => {
+  const {submitFailed} = state.forms.user.$form;
+
+  return {submitFailed};
+})(UserForm);
+
+class Signin extends Component {
 
   render() {
     return (
@@ -70,7 +129,6 @@ class Signin extends Component {
             </div>
           </div>
           <div className="col-md-6 col-sm-6 col-xs-12">
-
             <div className="login-form">
               <div className="login-form-title">Masuk Akun</div>
               <div className="row">
@@ -81,14 +139,9 @@ class Signin extends Component {
                   <NavLink className="login-form-subtitle" id="login-text" to="/auth">Daftar</NavLink>
                 </div>
               </div>
-
-              <form method="post" action="" id="login-form">
-                <div className="login-form-label">Email</div>
-                <input id="input_email" className="login-form-input" type="text" name="email" placeholder="Email"></input>
-                <div className="login-form-label">Password</div>
-                <input id="input_password" className="login-form-input" type="password" name="password" placeholder="Password"></input>
-                <button type="button" className="login-button" onClick={this.handleClick}>Masuk</button>
-              </form>
+              <Provider store={store}>
+                <BasicForm/>
+              </Provider>
               <div className="error-content">
                 <ul className="err-area"></ul>
               </div>
