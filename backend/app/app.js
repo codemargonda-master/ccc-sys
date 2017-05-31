@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'ccc-system'
+  database: 'ccc_system'
 })
 
 connection.connect(function (err) {
@@ -28,16 +28,6 @@ app.get('/', function (req, res) {
 })
 
 app.post('/auth', function (req, res) {
-  // // validation
-  // req.assert('name', 'Name is required').notEmpty();
-  // req.assert('email', 'A valid email is required').isEmail();
-  // req.assert('password', 'Enter a password 6 - 20').len(6, 20);
-  //
-  // var errors = req.validationErrors();
-  // if (errors) {
-  //   res.status(422).json(errors);
-  //   return;
-  // }
 
   // get data
   const data = {
