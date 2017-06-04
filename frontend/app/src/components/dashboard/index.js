@@ -52,22 +52,24 @@ class Dashboard extends Component {
               <div className="dashboard-title">Kelas yang tersedia</div>
               <div className="row">
                 <div className="col-md-6">
-                  <button onClick={this.handleClick} className="dashboard-android-content">
+                  <div className="dashboard-android-content">
                     <div className="dashboard-content-logo">
                       <img className="dashboard-image-logo" src={AndroidLogo}/>
                     </div>
                     <div className="dashboard-text-title">Android Development</div>
                     <div className="dashboard-text-subtitle">Mempelajari cara membuat aplikasi android dengan menggunakan android studio.</div>
-                  </button>
+                    <button className="button-dashboard" onClick={this.handleClick}>Daftar</button>
+                  </div>
                 </div>
                 <div className="col-md-6">
-                  <button onClick={this.handleClick} className="dashboard-web-content">
+                  <div className="dashboard-web-content">
                     <div className="dashboard-content-logo">
                       <img className="dashboard-image-logo" src={WebLogo}/>
                     </div>
                     <div className="dashboard-text-title">Web Development</div>
                     <div className="dashboard-text-subtitle">Mempelajari cara membuat website dengan teknologi laravel.</div>
-                  </button>
+                    <button className="button-dashboard" onClick={this.handleClick}>Daftar</button>
+                  </div>
                 </div>
               </div>
               <div className="dashboard-subtitle">Kelas yang sedang diikuti</div>

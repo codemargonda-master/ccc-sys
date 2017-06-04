@@ -66,7 +66,7 @@
 
 .dashboard-text-title{
   font-size: 20px;
-  padding-top: 3em;
+  padding-top: 3.5em;
   color: white;
   font-family: 'Montserrat';
   font-weight: 400;
@@ -74,7 +74,7 @@
 
 .dashboard-text-subtitle{
   font-size: 14px;
-  padding-top: 1em;
+  padding-top: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
   font-family: 'Raleway';
@@ -98,6 +98,19 @@
   height: 35px;
   width: 35px;
   margin-top: 0.7em;
+}
+
+.button-dashboard{
+  margin-top: 0.5em;
+  width: 125px;
+  height: 30px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(216, 216, 216, .3);
+  font-size: 18px;
+  font-family: 'Raleway';
+  font-weight: 500;
 }
 
 #dashboard-table{
