@@ -96,7 +96,7 @@ class CourseRegister extends Component {
               <option value="Intermediate (27 Juli 2017)">Intermediate (27 Juli 2017)</option>
             </FormControl>
           </FormGroup>
-        <button type="button" className="login-button" onClick={this.handleClick}>Submit</button>
+        <button type="button" className="regis-button" onClick={this.handleClick}>Submit</button>
         </form>
       </div>
     );

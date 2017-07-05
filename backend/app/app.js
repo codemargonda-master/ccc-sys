@@ -91,7 +91,7 @@ app.post('/regis', function(req, res) {
     batch: req.body.batch
   }
 
-  var query = 'SELECT count(*) as count FROM course_registration WHERE batch= ' + mysql.escape(data.batch)
+  var query = 'SELECT count(*) as count FROM course_registration WHERE batch= ' + mysql.escape(data.batch) + 'AND course= ' + mysql.escape(data.course)
 
   connection.query(query, function(error, rows) {
     if (rows[0].count != 1) {

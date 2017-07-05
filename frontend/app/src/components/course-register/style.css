@@ -12,3 +12,15 @@
   margin-right: auto;
   width: 550px;
 }
+
+.regis-button {
+  width: 46%;
+  background: #c63c2e;
+  border: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #bfbfbf;
+  color: white;
+  padding: 1em;
+  margin-top: 2em;
+}
