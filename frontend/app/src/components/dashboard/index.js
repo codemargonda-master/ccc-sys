@@ -37,10 +37,7 @@ class Dashboard extends Component {
           <div className="col-md-3">
             <ul className="dashboard-menu">
               <li className="dashboard-li">
-                <a href="#home">HOME</a>
-              </li>
-              <li className="dashboard-li">
-                <a href="#profile">PROFILE</a>
+                <a href="/home">HOME</a>
               </li>
               <li className="dashboard-li">
                 <a href="/">LOGOUT</a>

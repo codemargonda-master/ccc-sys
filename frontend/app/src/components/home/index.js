@@ -6,6 +6,7 @@ import Description from '../description/index';
 import Classes from '../classes/index';
 import Trainer from '../trainer/index';
 import Level from '../level/index';
+import Galeri from '../gallery/index';
 import Schedule from '../schedule/index';
 import Register from '../register/index';
 import Syllabus from '../syllabus/index';
@@ -24,12 +25,17 @@ class Home extends Component {
           <Navbar/>
         </Element>
         <Header/>
-        <Description/>
+        <Element name="description">
+          <Description/>
+        </Element>
         <Element name="program">
           <Classes/>
         </Element>
         <Level/>
         <Trainer/>
+        <Element name="galeri">
+          <Galeri/>
+        </Element>
         <Schedule/>
         <Register/>
         <Syllabus/>
