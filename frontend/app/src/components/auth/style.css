@@ -82,13 +82,14 @@
 
 .form-control.active {
   box-shadow: 0 0 5px 1px green;
-
-  &.invalid {
-    box-shadow: 0 0 5px 1px red;
-  }
+  color: black;
 }
 
-.errors {
+.form-control.invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+.error {
   color: red;
   font-size: 12px;
   margin: 5px;

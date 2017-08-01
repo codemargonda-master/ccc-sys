@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './style.css';
 import AndroidLogo from '../../assets/android.png';
 import WebLogo from '../../assets/html5.png';
-import Navbar from '../navbar/index2';
+import Navbar from '../navbar/index4';
 // import axios from 'axios';
 // import $ from 'jquery';
 // import ajax from 'jquery';

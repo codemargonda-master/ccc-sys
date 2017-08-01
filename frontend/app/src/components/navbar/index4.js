@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import logo from '../../assets/ccc-logo.png';
 import './style.css';
 import {NavLink} from 'react-router-dom';
-import Scroll from 'react-scroll';
-
-var Link = Scroll.Link;
 
 const Navbar = () => {
   return (
@@ -30,13 +27,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav navbar-right">
               <li>
-              <Link activeClassName="active" className="text-black" to="top" spy={true} smooth={true} duration={1000}>BERANDA</Link>
-              </li>
-              <li>
-                <a className="text-black" href="#galeri">GALERI</a>
-              </li>
-              <li>
-              <Link exact activeClassName="active" className="text-black" to="program" spy={true} smooth={true} offset={-50} duration={1000}>PROGRAM</Link>
+                <NavLink className="text-black" exact activeClassName='active' to='/home'>BERANDA</NavLink>
               </li>
               <li>
                 <NavLink className="text-black" exact activeClassName='active' to='/dashboard'>DASHBOARD</NavLink>
