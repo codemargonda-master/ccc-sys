@@ -23,7 +23,7 @@ class Header extends Component {
               <button className="header-button button-daftar" onClick={this.handleClick}>Daftar Sekarang</button>
             </div>
             <div className="col-md-6 col-sm-6 col-xs-12">
-              <Link activeClassName="active" className="header-button button-info" to="description" spy={true} smooth={true} offset={-25} duration={1000}>Lebih Lanjut</Link>
+              <Link activeClassName="active" className="header-button button-info" to="description" spy={true} smooth={true} offset={-50} duration={1000}>Lebih Lanjut</Link>
             </div>
           </div>
         </div>

@@ -80,16 +80,23 @@
   margin-top: 2em;
 }
 
-.form-control.active {
+input.active:valid {
   box-shadow: 0 0 5px 1px green;
   color: black;
 }
 
-.form-control.invalid {
+input.active:invalid {
   box-shadow: 0 0 5px 1px red;
+  color: red;
 }
 
 .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.errors {
   color: red;
   font-size: 12px;
   margin: 5px;

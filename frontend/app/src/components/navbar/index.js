@@ -35,7 +35,7 @@ class Navbar extends Component {
                   <Link activeClassName="active" className="text-black" to="top" spy={true} smooth={true} duration={1000}>BERANDA</Link>
                 </li>
                 <li>
-                  <Link activeClassName="active" className="text-black" to="program" spy={true} smooth={true} offset={-50} duration={1000}>PROGRAM</Link>
+                  <Link activeClassName="active" className="text-black" to="program" spy={true} smooth={true} offset={-25} duration={1000}>PROGRAM</Link>
                 </li>
                 <li>
                   <Link activeClassName="active" className="text-black" to="galeri" spy={true} smooth={true} offset={-25} duration={1000}>GALERI</Link>

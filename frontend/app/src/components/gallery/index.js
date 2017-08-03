@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './style.css';
 import Gallery from 'react-photo-gallery';
 import Galeri1 from '../../assets/gallery1.jpg';
@@ -8,7 +8,7 @@ import Galeri4 from '../../assets/gallery4.jpg';
 import Galeri5 from '../../assets/gallery5.jpg';
 import Galeri6 from '../../assets/gallery6.jpg';
 
-export default class Galeri extends React.Component {
+export default class Galeri extends Component {
   render() {
     return (
       <div className="gallery">
@@ -18,6 +18,7 @@ export default class Galeri extends React.Component {
     );
   }
 }
+
 const PHOTO_SET = [
   {
     src: Galeri1,

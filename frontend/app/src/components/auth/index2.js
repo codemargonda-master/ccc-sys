@@ -22,13 +22,13 @@ class BasicForm extends React.Component {
   }
 
   handleChange(e) {
+    e.target.classList.add('active');
     this.setState({
       [e.target.name]: e.target.value
     });
 
-    if (this.showInputError(e.target.name)) {
-      e.target.classList.add('active');
-    }
+    this.showInputError(e.target.name)
+
   }
 
   handleSubmit(e) {
@@ -71,6 +71,7 @@ class BasicForm extends React.Component {
     let isFormValid = true;
 
     inputs.forEach(input => {
+      input.classList.add('active');
 
       const isInputValid = this.showInputError(input.name);
 

@@ -3,7 +3,7 @@ import './style.css';
 
 class Register extends Component {
   handleClick(){
-    window.location.href='/auth';
+    window.location.href='/dashboard';
   }
 
   render() {

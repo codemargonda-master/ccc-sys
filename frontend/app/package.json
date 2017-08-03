@@ -10,6 +10,8 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
+    "react-form-with-constraints": "^0.4.0",
+    "react-image-gallery": "^0.8.3",
     "react-photo-gallery": "^5.6.1",
     "react-redux": "^5.0.5",
     "react-redux-form": "^1.11.2",

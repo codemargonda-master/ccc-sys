@@ -6,9 +6,9 @@ import Description from '../description/index';
 import Classes from '../classes/index';
 import Trainer from '../trainer/index';
 import Level from '../level/index';
-import Galeri from '../gallery/index';
+import Galeri from '../gallery/index2';
 import Schedule from '../schedule/index';
-import Register from '../register/index';
+import Register from '../register/index2';
 import Syllabus from '../syllabus/index';
 import Testimony from '../testimony/index';
 import Footer from '../footer/index';
@@ -38,7 +38,6 @@ class Home extends Component {
         </Element>
         <Schedule/>
         <Register/>
-        <Syllabus/>
         <Testimony/>
         <Footer/>
       </div>
