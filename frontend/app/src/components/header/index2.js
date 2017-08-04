@@ -5,10 +5,15 @@ import {NavLink} from 'react-router-dom';
 import Scroll from 'react-scroll';
 
 var Link = Scroll.Link;
+var scroller = Scroll.scroller;
 
 class Header extends Component {
   handleClick(){
     window.location.href='/dashboard';
+  }
+
+  scrollTo() {
+    scroller.scrollTo('description', {duration: 1000, spy: true, smooth: true, offset: -50})
   }
 
   render() {
@@ -23,7 +28,7 @@ class Header extends Component {
               <button className="header-button button-daftar" onClick={this.handleClick}>Daftar Sekarang</button>
             </div>
             <div className="col-md-6 col-sm-6 col-xs-12">
-              <Link activeClassName="active" className="header-button button-info" to="description" spy={true} smooth={true} offset={-50} duration={1000}>Lebih Lanjut</Link>
+              <button className="header-button button-info" onClick={this.scrollTo}>Lebih Lanjut</button>
             </div>
           </div>
         </div>
