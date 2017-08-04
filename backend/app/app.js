@@ -131,4 +131,29 @@ app.get('/course-registered', function(req, res) {
 
 })
 
+app.post('/subscribe', function (req, res) {
+  var data = {
+    email: req.body.email
+  }
+
+  var query = 'SELECT *,count(*) as count FROM subscribe WHERE email= ' + mysql.escape(data.email) + ''
+
+  connection.query(query, function (error, rows) {
+    if (rows[0].count != 1) {
+      connection.query('INSERT INTO subscribe set ? ', data, function(error, rows) {
+        if (error) {
+          res.send(error)
+        }
+        res.status(200).json({success: 'true', msg: 'Subscribe success!'})
+        console.log('Subscribe success!')
+      })
+    } else if (rows[0].count = 1) {
+      res.status(401).json({success: 'false', msg: 'Email already exist!'})
+      console.log('Email already exist!')
+    } else {
+      res.send(error)
+    }
+  })
+})
+
 module.exports = app
